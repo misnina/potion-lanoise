@@ -19,7 +19,7 @@ const red = new Color('red', 3, [], '#e31235', '#8f136e');
 const yellow = new Color('yellow', 3, [], '#e3d966', '#c28917');
 const blue = new Color('blue', 3, [], '#2cbde6', '#2c50ab');
 
-const orange = new Color('orange', 2, [red, yellow], '#d6931e', '#b85423');
+const orange = new Color('orange', 2, [red, yellow], '#eb790e', '#bf2c5c');
 const green = new Color('green', 2, [yellow, blue], '#5ebd2f', '#308069');
 const violet = new Color('violet', 2, [blue, red], '#a457d4', '#9c3582');
 
@@ -28,7 +28,7 @@ const yellowGreen = new Color('yellow-green', 1, [green, yellow], '#bee026', '#6
 const blueGreen = new Color('blue-green', 1, [green, blue], '#2dd67c', '#20a181');
 const blueViolet = new Color('blue-violet', 1, [violet, blue], '#532bcc', '#681a9c');
 const redViolet = new Color('red-violet', 1, [violet, red], '#cc1bae', '#681a9c');
-const redOrange = new Color('red-orange', 1, [orange, red], '#e63d1c', '#b3253f');
+const redOrange = new Color('red-orange', 1, [orange, red], '#db5c0d', '#b3253f');
 
 const COLORS = {
   white,

@@ -29,7 +29,6 @@ class Ingredient {
   }
 
   displayItemElement() {
-    console.log(this.owned);
     const displayDigit = this.owned < 10 ? `0${this.owned}` : `${this.owned}`;
 
     const item = document.createElement('div');

@@ -1,10 +1,12 @@
 //Test potion creation
 function testPotions() {
   for (let i = 0; i < 50; i++) {
-    const test = createPotion([woolsworth, cirtBerry, zoruScale, dragonEgg], i);
+    const test = createPotion([woolsworth, dragonEgg], i);
     document.querySelector('#potion-container').appendChild(test.renderPotionEle());
   }
 }
+
+testPotions();
 
 /* Selectors */
 const ingredientContainer = document.querySelector('#ingredient-container');
@@ -26,7 +28,6 @@ function renderIngredients(ingredients) {
   const orderedIngredients = ingredients.sort((a, b) => {
     return a.id + b.id;
   });
-  console.log(orderedIngredients);
   for (let i = 0; i < orderedIngredients.length; i++) {
     orderedIngredients[i].renderItem(ingredientContainer);
   }
