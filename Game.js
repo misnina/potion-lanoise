@@ -1,16 +1,17 @@
+/* Selectors */
+const ingredientContainer = document.querySelector('#ingredient-container');
+const potionContainer = document.querySelector('#potion-container');
+
 //Test potion creation
 function testPotions() {
   for (let i = 0; i < 50; i++) {
-    const test = createPotion([woolsworth, dragonEgg], i);
+    const test = createPotion([woolsworth, dragonEgg, cirtBerry], i, 2);
     document.querySelector('#potion-container').appendChild(test.renderPotionEle());
   }
 }
 
 testPotions();
 
-/* Selectors */
-const ingredientContainer = document.querySelector('#ingredient-container');
-const potionContainer = document.querySelector('#potion-container');
 
 /* Game Start Ingredients */
 const startingIngredients = [

@@ -1,34 +1,37 @@
 
 class Color {
-  constructor(name, purity, contains, basehex, shadowhex) {
+  constructor(name, purity, contains, basehex, shadowhex, ids) {
     this.name = name;
     this.purity = purity;
     this.contains = contains;
 
+    // depriciated
     this.basehex = basehex;
     this.shadowhex = shadowhex;
+
+    this.ids = ids
   }
 }
 const MAXPURITY = 5;
 
-const white = new Color('white', 4, [], '#ebf2f2', '#b8bfbf');
-const black = new Color('black', 1, [], '#453a42', '#1c1a1b');
-const brown = new Color('brown', 1, [], '#73462a', '#452924');
+const white = new Color('white', 4, [], '#ebf2f2', '#b8bfbf', [14, 29, 44]);
+const black = new Color('black', 1, [], '#453a42', '#1c1a1b', [13, 28, 43]);
+const brown = new Color('brown', 1, [], '#73462a', '#452924', [12, 27, 42]);
 
-const red = new Color('red', 3, [], '#e31235', '#8f136e');
-const yellow = new Color('yellow', 3, [], '#e3d966', '#c28917');
-const blue = new Color('blue', 3, [], '#2cbde6', '#2c50ab');
+const red = new Color('red', 3, [], '#e31235', '#8f136e', [0, 15, 30]);
+const yellow = new Color('yellow', 3, [], '#e3d966', '#c28917', [2, 17, 32]);
+const blue = new Color('blue', 3, [], '#2cbde6', '#2c50ab', [1, 16, 31]);
 
-const orange = new Color('orange', 2, [red, yellow], '#eb790e', '#bf2c5c');
-const green = new Color('green', 2, [yellow, blue], '#5ebd2f', '#308069');
-const violet = new Color('violet', 2, [blue, red], '#a457d4', '#9c3582');
+const orange = new Color('orange', 2, [red, yellow], '#eb790e', '#bf2c5c', [3, 18, 33]);
+const green = new Color('green', 2, [yellow, blue], '#5ebd2f', '#308069', [4, 19, 34]);
+const violet = new Color('violet', 2, [blue, red], '#a457d4', '#9c3582', [5, 20, 35]);
 
-const yellowOrange = new Color('yellow-orange', 1, [orange, yellow], '#f7bd1e', '#d67d09');
-const yellowGreen = new Color('yellow-green', 1, [green, yellow], '#bee026', '#6aba2d');
-const blueGreen = new Color('blue-green', 1, [green, blue], '#2dd67c', '#20a181');
-const blueViolet = new Color('blue-violet', 1, [violet, blue], '#532bcc', '#681a9c');
-const redViolet = new Color('red-violet', 1, [violet, red], '#cc1bae', '#681a9c');
-const redOrange = new Color('red-orange', 1, [orange, red], '#db5c0d', '#b3253f');
+const yellowOrange = new Color('yellow-orange', 1, [orange, yellow], '#f7bd1e', '#d67d09', [6, 21, 36]);
+const yellowGreen = new Color('yellow-green', 1, [green, yellow], '#bee026', '#6aba2d', [7, 22, 37]);
+const blueGreen = new Color('blue-green', 1, [green, blue], '#2dd67c', '#20a181', [8, 23, 38]);
+const blueViolet = new Color('blue-violet', 1, [violet, blue], '#532bcc', '#681a9c', [9, 24, 39]);
+const redViolet = new Color('red-violet', 1, [violet, red], '#cc1bae', '#681a9c', [10, 25, 40]);
+const redOrange = new Color('red-orange', 1, [orange, red], '#db5c0d', '#b3253f', [11, 26, 41]);
 
 const COLORS = {
   white,

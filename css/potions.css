@@ -5,12 +5,17 @@
 
 #potion-container {
   margin: auto;
-  max-width: 700px;
+  max-width: 1000px;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: first baseline;
   align-content: space-around;
+}
+
+#potion-container > img {
+  align-self: center;
 }
 
 .potion {

@@ -9,10 +9,12 @@ function randomNumber(min, max) {
 }
 
 class Potion {
-  constructor(uuid, color, potency) {
+  constructor(uuid, color, potency, renderSize) {
     this.uuid = uuid;
     this.color = color;
     this.potency = potency;
+    this.renderSize = renderSize;
+    this.potSize = this.calcPotSize();
     this.price = this.calcPrice();
   }
 
@@ -43,6 +45,38 @@ class Potion {
     return this.potency * 10;
   }
 
+  calcPotSize() {
+    if (this.potency < 3) {
+      return 1;
+    } else if (this.potency < 6) {
+      return 2;
+    } else if (this.potency > 6) {
+      return 3;
+    }
+  }
+
+  imgSrc(renderSize) {
+    let id = '00';
+    if (!(renderSize > 3)) {
+      id = this.color.ids[this.potSize - 1];
+      console.log(this.potSize);
+      if (id < 10) {
+        id = `0${id}`
+      }
+    } 
+      return `./images/${this.renderSize}x_${id}.png`;
+  }
+
+  renderPotionEle(renderSize) {
+    const pot = document.createElement('img');
+    pot.src = this.imgSrc(this.renderSize);
+    pot.alt = this.name;
+    pot.title = this.name;
+    return pot;
+  }
+
+  // depriciated
+  /*
   renderPotionEle() {
     const pot = document.createElement('div');
     pot.classList.add('potion');
@@ -105,8 +139,9 @@ class Potion {
   
     return pot;
   }
+  */
 }
 
-function createPotion(reactants, uuid) {
-  return new Potion(uuid, generateColor(reactants), generatePotency(reactants));
+function createPotion(reactants, uuid, imgSize) {
+  return new Potion(uuid, generateColor(reactants), generatePotency(reactants), imgSize);
 }
